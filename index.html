@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>BMI CALCULATOR</h1>
+    </header>
+
+    <main>
+        <div class="main-container">
+            <section class="form-container">
+                <header><h3>FORM BMI</h3></header>
+                <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan,
+                    berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu ? 
+                    Yuk hitung sekarang di kalkulator BMI di bawah ini.
+                </p>
+                <form id="formBmi">
+                    <div>
+                        <label>Jenis Kelamin</label><br>
+                        <label for="sexM">Pria - <img src="./assets/male.png" width="10" height="10"></label>
+                        <input type="radio" id="sexM" name="sex" checked="checked" value="1">/
+                        <label for="sexW">Wanita - <img src="./assets/female.png" width="10" height="10"></label>
+                        <input type="radio" id="sexW" name="sex" value="2"><br><br>
+                    </div>
+                    <div>
+                        <label for="weight">Berat Badan (kg)</label><br>
+                        <input type="number" required id="weight" min="30" max="350"><br><br>
+                    </div>
+                    <div>
+                        <label for="age">Usia (tahun)</label><br>
+                        <input type="number" required id="age" min="5" max="130"><br><br>
+                    </div>
+                    <div>
+                        <label for="height">Tinggi Badan (cm)</label><br>
+                        <input type="number" required id="height" min="50" max="290"><br><br>
+                    </div>
+                    <div>
+                        <button type="submit" id="hitung" onclick="calculate(this)">Hitung BMI</button>
+                        <button type="reset" id="reset">Reset</button>
+                    </div>
+                </form>
+                <p>Keunggulan Fitur :</p>
+                <ol>
+                    <li>Menghitung berat badan</li>
+                    <li>Menentukan kategori berat badan ideal atau tidak</li>
+                    <li>Mempersiapkan program penurunan berat badan</li>
+                </ol>
+                <p>Kalkulator ini hanya diperuntukkan bagi orang dewasa (wanita hamil atau menyusui tidak boleh mengandalkan pembacaan BMI ini)
+                    dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan dokter.
+                </p>
+                <p>Kalkulator akan memberi Anda gambaran tentang perbandingan berat badan Anda dengan nilai umum. 
+                    Index Massa Tubuh (BMI) dihitung sebagai berat badan Anda (dalam kilogram) dibagi
+                    dengan kuadrat tinggi badan Anda (dalam meter) atau BMI = Kg/M<sup>2</sup> </p>
+            </section>
+            <section class="result-container" id="result">
+                <header><h3>HASIL</h3></header>
+                <div class="result-calculate">
+                    <h4>Index Massa Tubuh Anda :</h4>
+                    <div id="resultBMI">0</div>
+                    <div id="summary"></div>
+                    <div id="konsul">
+                        <br><a href="https://www.klikdokter.com/tanya-dokter/gizi-klinik" class="btnConsult">Konsultasi Online Ahli Gizi</a>
+                        <br><p class="disclaimer">BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang.
+                            Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan Anda.   
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+        
+    <script src="/js/script.js"></script>
+</body>
+</html>
